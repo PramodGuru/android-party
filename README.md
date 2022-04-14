@@ -1,22 +1,20 @@
-# Task for a Great Android developer
+# androidparty
 
-If you found this task it means we are looking for you!
+Current status
+- Sends a POST request to http://playground.tesonet.lt/v1/tokens with the login credentials to get an auth token
+- Using the auth token, a list of servers is fetched from the server via http://playground.tesonet.lt/v1/servers
+- Basic error and HTTP handling
+- Tools and framework used: Retrofit, Moshi, Koin (DI)
+- Architecture: MVVM
 
-> Note: To clone this repository you will need [GIT-LFS](https://git-lfs.github.com/)
+Not implemented
+- Unit tests
+- Smooth animated transitions
+- Persistant storage of data
+- Exclusive loading page
 
-## Few simple steps
-
-1. Fork this repo
-2. Do your best
-3. Prepare pull request and let us know that you are done
-
-## Few simple requirements
-
-- Send authorization request (POST) to http://playground.tesonet.lt/v1/tokens to generate token with body: `{"username": "tesonet", "password": "partyanimal"}`. (Don't forget Content-Type)
-- Get servers list from http://playground.tesonet.lt/v1/servers. Add header to request: `Authorization: Bearer <token>`
-- Design should be recreated as closely as possible
-- Bonus: implement smooth animated transition from login through loader to server list screen
-- Bonus: implement persistent storage of the downloaded server data
-- Bonus: have a good set of unit tests
-
-*Note:* The bonus requirements are optional. While they are nice to have, it's much more important to have the basics nailed.
+Further improvements
+- Reduce boilerplate and improve code reusage with Helpers and Providers
+- Unit tests
+- Save login data to bypass login page when a valid auth token is available
+- Replace xml layouts with Compose
